@@ -1,0 +1,19 @@
+
+///// CSS
+
+1. If ID is Present
+CSS -> Tagname#id or #id
+
+2. IF class attribute is present
+CSS -> tagname.class or .class
+
+3. IF write css based on any attribute
+CSS -> [attribute ='value']
+
+4. IF write css with traversing from parent to chlid
+CSS -> parenttagname >> childagname
+
+5. IF needs to write the locator based on text 
+text =''
+
+
