@@ -1,7 +1,7 @@
 const { test, expect } = require("@playwright/test")
 
 
-test.only('@Website Client App login', async ({ page }) => {
+test('@Website Client App login', async ({ page }) => {
 
     //js file- Login js, DashboardPage
 
