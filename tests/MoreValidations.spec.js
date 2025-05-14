@@ -1,7 +1,7 @@
 const {test, expect}=require("@playwright/test")
 
 
-test.only("PopUp Validations",async({page})=>{
+test("PopUp Validations",async({page})=>{
 
 
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
@@ -29,4 +29,29 @@ test.only("PopUp Validations",async({page})=>{
     console.log(textCheck.split(" ")[1]);
 
 
+})
+
+
+// Screenshort - store in the project
+
+test("Screenshot & Visual Comparision",async({page})=>{
+
+    await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
+
+    await expect(page.locator("#displayed-text")).toBeVisible()
+    await page.locator('#displayed-text').screenshot({path:'partialScreenshot.png'}) // Exactpoint take screenshot
+    await page.locator("#hide-textbox").click()
+    await page.screenshot({path:'screenshot.png'}) // Up to Uparlavel Screenshot
+    await expect(page.locator("#displayed-text")).toBeHidden()
+  
+
+})
+
+
+// Screenshot - store -> Screenshot -> Visual Testing
+
+test.only("Visual Testing", async({page})=>{
+
+    await page.goto('https://google.com/')
+    expect(await page.screenshot()).toMatchSnapshot('landing.png')
 })

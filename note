@@ -17,3 +17,9 @@ CSS -> parenttagname >> childagname
 text =''
 
 
+"scripts": {
+   "test":"npx playwright test tests/WebAPIpart1.spec.js --headed"
+
+  },
+
+ 
